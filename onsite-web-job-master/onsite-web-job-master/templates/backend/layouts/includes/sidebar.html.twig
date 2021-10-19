@@ -1,0 +1,213 @@
+<b-container fluid>
+  <hr class="mt-0 bg-primary d-lg-none">
+
+  <a class="dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 my-3" href="/backend/pages/dashboard">
+    <i class="fas fa-chart-line mr-2"></i> Bảng tin
+  </a>
+
+  <h6 class="text-dark">Tài khoản - Phân quyền</h6>
+
+  <a v-b-toggle.acl_roles-collapse class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-3">
+    <i class="fas fa-user-cog mr-2"></i> Vai trò
+  </a>
+  <b-collapse id="acl_roles-collapse" class="mt-1">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/auth/acl_roles/">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/auth/acl_roles/create.php">
+        <i class="fas fa-plus mr-2"></i> Thêm mới
+      </a>
+    </div>
+  </b-collapse>
+
+  <a v-b-toggle.acl_permissions-collapse class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-2">
+    <i class="fas fa-user-lock mr-2"></i> Quyền sử dụng
+  </a>
+  <b-collapse id="acl_permissions-collapse" class="mt-1">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/auth/acl_permissions/">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/auth/acl_permissions/create.php">
+        <i class="fas fa-plus mr-2"></i> Thêm mới
+      </a>
+    </div>
+  </b-collapse>
+
+  <a v-b-toggle.acl_users-collapse class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-2">
+    <i class="fas fa-users mr-2"></i> Người dùng
+  </a>
+  <b-collapse id="acl_users-collapse" class="mt-1">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/auth/nguoi-dung/">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/auth/nguoi-dung/create.php">
+        <i class="fas fa-plus mr-2"></i> Thêm mới
+      </a>
+    </div>
+  </b-collapse>
+
+  <a v-b-toggle.shop_customers-collapse
+     class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-2 mb-3">
+    <i class="fas fa-user-friends mr-2"></i> Khách hàng
+  </a>
+  <b-collapse id="shop_customers-collapse" class="mt-1 mb-3">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_customers/index.php">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_customers/create.php">
+        <i class="fas fa-plus mr-2"></i> Thêm mới
+      </a>
+    </div>
+  </b-collapse>
+
+  <h6 class="text-dark">Danh sách</h6>
+
+  <a v-b-toggle.shop_categories-collapse class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-3">
+    <i class="fas fa-layer-group mr-2"></i> Loại sản phẩm
+  </a>
+  <b-collapse id="shop_categories-collapse" class="mt-1">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_categories/">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_categories/create.php">
+        <i class="fas fa-plus mr-2"></i> Thêm mới
+      </a>
+    </div>
+  </b-collapse>
+
+  <a v-b-toggle.shop_suppliers-collapse class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-2">
+    <i class="fas fa-industry mr-2"></i> Nhà cung cấp
+  </a>
+  <b-collapse id="shop_suppliers-collapse" class="mt-1">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_suppliers/">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_suppliers/create.php">
+        <i class="fas fa-plus mr-2"></i> Thêm mới
+      </a>
+    </div>
+  </b-collapse>
+
+  <a v-b-toggle.shop_products-collapse class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-2">
+    <i class="fas fa-boxes mr-2"></i> Sản phẩm
+  </a>
+  <b-collapse id="shop_products-collapse" class="mt-1">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/pages/san-pham/">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/pages/san-pham/create.php">
+        <i class="fas fa-plus mr-2"></i> Thêm mới
+      </a>
+    </div>
+  </b-collapse>
+
+  <a v-b-toggle.shop_product_images-collapse
+     class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-2">
+    <i class="fas fa-images mr-2"></i> Hình sản phẩm
+  </a>
+  <b-collapse id="shop_product_images-collapse" class="mt-1">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_product_images/">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_product_images/create.php">
+        <i class="fas fa-plus mr-2"></i> Thêm mới
+      </a>
+    </div>
+  </b-collapse>
+
+  <a v-b-toggle.shop_product_reviews-collapse
+     class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-2 mb-3">
+    <i class="fas fa-comments mr-2"></i> Đánh giá sản phẩm
+  </a>
+  <b-collapse id="shop_product_reviews-collapse" class="mt-1 mb-3">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_product_reviews/">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_product_reviews/create.php">
+        <i class="fas fa-plus mr-2"></i> Thêm mới
+      </a>
+    </div>
+  </b-collapse>
+
+  <h6 class="text-dark">Khuyến mãi - Giảm giá</h6>
+
+  <a v-b-toggle.shop_vouchers-collapse class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-3">
+    <i class="fas fa-tags mr-2"></i> Phiếu giảm giá
+  </a>
+  <b-collapse id="shop_vouchers-collapse" class="mt-1">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_vouchers/">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_vouchers/create.php">
+        <i class="fas fa-plus mr-2"></i> Thêm mới
+      </a>
+    </div>
+  </b-collapse>
+
+  <a v-b-toggle.shop_product_vouchers-collapse
+     class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-2">
+    <i class="fas fa-box-tissue mr-2"></i> Sản phẩm được áp dụng
+  </a>
+  <b-collapse id="shop_product_vouchers-collapse" class="mt-1">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_product_vouchers/">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_product_vouchers/create.php">
+        <i class="fas fa-plus mr-2"></i> Thêm mới
+      </a>
+    </div>
+  </b-collapse>
+
+  <a v-b-toggle.shop_customer_vouchers-collapse
+     class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-2 mb-3">
+    <i class="fas fa-user-tag mr-2"></i> Khách hàng được áp dụng
+  </a>
+  <b-collapse id="shop_customer_vouchers-collapse" class="mt-1 mb-3">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_customer_vouchers/">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_customer_vouchers/create.php">
+        <i class="fas fa-plus mr-2"></i> Thêm mới
+      </a>
+    </div>
+  </b-collapse>
+
+  <h6 class="text-dark">Quản lý đơn hàng</h6>
+
+  <a v-b-toggle.shop_orders-collapse
+     class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-3 mb-3">
+    <i class="fas fa-file-invoice-dollar mr-2"></i> Đơn đặt hàng
+  </a>
+  <b-collapse id="shop_orders-collapse" class="mt-1 mb-3">
+    <div class="card border-top-0 rounded-0 shadow-sm">
+      <a class="dropdown-item d-flex justify-content-between align-items-center bg-light text-dark" href="/backend/shop_orders/">
+        <i class="fas fa-clipboard-list mr-2"></i> Danh sách
+      </a>
+    </div>
+  </b-collapse>
+
+  <h6 class="text-dark">Báo cáo - Thống kê</h6>
+
+  <a class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-3 mb-3"
+     href="/backend/reports/baocaodoanhthu.php">
+    <i class="fas fa-hand-holding-usd mr-2"></i> Doanh thu
+  </a>
+
+  <a class="cursor-pointer dropdown-item d-flex justify-content-between align-items-center bg-primary text-white py-2 mt-3 mb-3"
+     href="/backend/reports/baocaodoanhthu.php">
+    <i class="fas fa-user-friends mr-2"></i> Lượng khách hàng
+  </a>
+
+</b-container>

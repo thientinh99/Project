@@ -1,0 +1,14 @@
+#navbar .dropdown-menu-navbar {
+  width: 18rem;
+}
+
+@media (min-width: 992px) {
+  #navbar .brand {
+    width: calc(320px - 16px - 1rem);
+  }
+
+  .wrapper {
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
