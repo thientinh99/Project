@@ -1,0 +1,163 @@
+﻿<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="~/admin" class="brand-link" style="text-align: center" >
+        <img src="~/Content/clients/images/justbuy-logo/logo_justbuy_L.gif" width="150"/>
+    </a>
+
+    <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="@Url.Content(ViewBag.Avatar)" class="img-circle elevation-2" alt="Admin Avatar" />
+            </div>
+            <div class="info">
+                <a href="~/Admin/AdminProfile" class="d-block">@ViewBag.FullName</a>
+            </div>
+        </div>
+
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                <li class="nav-item menu-open">
+                    <a href="~/Admin/Home" class="nav-link">
+                        <img src="~/Asset/dist/img/icons/icons8-dashboard-30.png" />
+
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="~/Asset/dist/img/ico/icon_slidebar.png" />
+                        <p>
+                            Configuration
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Admin/SlidebarConfigurations" class="nav-link">
+                                <img src="~/Asset/dist/img/ico/icon_slide.png" />
+                                <p>Slidebars</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Admin/BestSellerConfigurations" class="nav-link">
+                                <img src="~/Asset/dist/img/ico/icon_bestseller.png" />
+                                <p>Best Seller Banners</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Admin/NewProductConfigurations" class="nav-link">
+                                <img src="~/Asset/dist/img/ico/icon_new.png" />
+                                <p>New Product Banners</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Admin/PromotionConfigurations" class="nav-link">
+                                <img src="~/Asset/dist/img/ico/icon_promotion.png" />
+                                <p>Promotion Banners</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="~/Admin/Feedbacks" class="nav-link">
+                        <img src="~/Asset/dist/img/ico/icon_feedback.png" />
+                        <p>Feedback Management</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="~/Asset/dist/img/ico/icon_user.png" />
+                        <p>User Management</p>
+                        <i class="fas fa-angle-left right"></i>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Admin/Administrators" class="nav-link">
+                                <img src="~/Asset/dist/img/icons/administrator.png" />
+                                <p>Administrators</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Admin/Customers" class="nav-link">
+                                <img src="~/Asset/dist/img/ico/icon_customer.png" />
+                                <p>Customers</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="~/Admin/Categories" class="nav-link">
+                        <img src="~/Asset/dist/img/ico/icon_categories.png" />
+                        <p>Category Management</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="~/Admin/Suppliers" class="nav-link">
+                        <img src="~/Asset/dist/img/ico/icon_supplier.png" />
+                        <p>Supplier Management</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="~/Admin/Discounts" class="nav-link">
+                        <img src="~/Asset/dist/img/ico/icon_discount.png" />
+                        <p>Discount Management</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="~/Admin/Products" class="nav-link">
+                        <img src="~/Asset/dist/img/ico/icon_product.png" />
+                        <p>Product Management</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="~/Admin/Orders" class="nav-link">
+                        <img src="~/Asset/dist/img/ico/icon_order.png" />
+                        <p>Order Management</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="~/Asset/dist/img/ico/icon_blog.png" />
+                        <p>Blog Management</p>
+                        <i class="fas fa-angle-left right"></i>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Admin/BlogCategories" class="nav-link">
+                                <img src="~/Asset/dist/img/ico/icon_blog_category.png" />
+                                <p>Blog Category</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Admin/Blogs" class="nav-link">
+                                <img src="~/Asset/dist/img/ico/icon_blog_blog.png" />
+                                <p>Blog</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Admin/BlogComments" class="nav-link">
+                                <img src="~/Asset/dist/img/ico/icon_blog_comment.png" />
+                                <p>Blog Comment</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Logout", "Login")" class="nav-link">
+                        <img src="~/Asset/dist/img/icons/icons8-sign-out-30.png" />
+                        <p>Logout</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>
+

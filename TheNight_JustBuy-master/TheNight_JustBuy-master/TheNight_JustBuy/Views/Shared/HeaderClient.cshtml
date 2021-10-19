@@ -1,0 +1,176 @@
+﻿@{ 
+    var categoryList = (List<TheNight_JustBuy.Models.Category>)ViewBag.CategoryList;
+    var blogCategoryList = (List<TheNight_JustBuy.Models.BlogCategory>)ViewBag.BlogCategoryList;
+    var supplierList = (List<TheNight_JustBuy.Models.Supplier>)ViewBag.SupplierList;
+
+}
+
+<div id="biof-loading">
+    <div class="biof-loading-center">
+        <div class="biof-loading-center-absolute">
+            <div class="dot dot-one"></div>
+            <div class="dot dot-two"></div>
+            <div class="dot dot-three"></div>
+        </div>
+    </div>
+</div>
+
+<header id="header" class="header-area style-01 layout-01">
+    <div class="header-top hidden-xs hidden-sm">
+        <div class="container">
+            <div class="top-bar left">
+                <ul class="horizontal-menu">
+                    <li><a href="mailto: Justbuy@company.com"><i class="fa fa-envelope" aria-hidden="true"></i>Justbuy@company.com</a></li>
+                </ul>
+                <ul class="social-list circle-layout">
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="top-bar right">
+                <ul class="horizontal-menu">
+
+                    @{
+                        if (ViewBag.IsLoggedIn == true)
+                        {
+                            <li><a href="~/CustomerProfile" class="login-link"><i class="biolife-icon icon-login"></i>@ViewBag.CustomerFullName</a></li>
+                            <li><a href="~/CustomerLogin/Logout" class="login-link"><i class="biolife-icon icon-login"></i>Log out</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="~/CustomerLogin" class="login-link"><i class="biolife-icon icon-login"></i>Login</a></li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-middle hidden-sm hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-2 col-md-6 col-xs-6">
+                    <a href="~/home" class="biolife-logo">
+                        <img style="padding-left:20%" src="~/Content/clients/images/justbuy-logo/logo_justbuy_L.gif" alt="justbuy logo" width="200" height="100" />
+                    </a>
+                </div>
+                <div class="col-lg-9 col-md-10 padding-top-2px">
+                    <div class="header-search-bar layout-01 no-product-cat">
+
+
+                            @using (Html.BeginForm("Search", "Items", FormMethod.Post, new { @class= "form-search" }))
+                            {
+                                <input name="txtSearch" value="" type="text" class="input-text" placeholder="Search here...">
+                                <button type="submit" class="btn-submit"><i class="biolife-icon icon-search"></i></button>
+                            }
+
+                    </div>
+                    <div class="live-info">
+                        <p class="telephone"><i class="fa fa-phone" aria-hidden="true"></i><b class="phone-number">(+900) 123 456 7891</b></p>
+                        <p class="working-time">Mon-Fri: 8:30am-7:30pm; Sat-Sun: 9:30am-4:30pm</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom biolife-sticky-object">
+        <div class="container md-possition-relative">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 hidden-sm hidden-xs">
+                    <div class="vertical-menu vertical-category-block ">
+                        <div class="block-title">
+                            <span class="menu-icon">
+                                <span class="line-1"></span>
+                                <span class="line-2"></span>
+                                <span class="line-3"></span>
+                            </span>
+                            <span class="menu-title">All Categories</span>
+                            <span class="angle" data-tgleclass="fa fa-caret-down"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="wrap-menu">
+                            <ul class="menu clone-main-menu">
+                                @foreach (var item in categoryList) { 
+                                    <li class="menu-item"><a href="@Url.Action("Index", "Items", new { id = item.CategoryID })" class="menu-name" data-title="Ocean Foods"><i class="biolife-icon icon-fish"></i>@item.CategoryName</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 hidden-sm hidden-xs md-possition-initial">
+                    <div class="primary-menu">
+                        <ul class="menu biolife-menu clone-main-menu clone-primary-menu" id="primary-menu" data-menuname="main menu">
+                            <li class="menu-item"><a href="~/home/">Home</a></li>
+                            <li class="menu-item menu-item-has-children has-child">
+                                <a href="#" class="menu-name" data-title="Product">Product</a>
+                                <ul class="sub-menu">
+                                    @foreach (var item in categoryList)
+                                    {
+                                        <li class="menu-item"><a href="@Url.Action("Index", "Items", new { id = item.CategoryID })">@item.CategoryName</a></li>
+                                    }
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children has-child">
+                                <a href="#" class="menu-name" data-title="Product">Blog</a>
+                                <ul class="sub-menu">
+                                    @foreach (var bc in blogCategoryList)
+                                    {
+                                        <li class="menu-item"><a href="@Url.Action("Category", "Blog", new { id = bc.CategoryID })">@bc.CategoryName</a></li>
+                                    }
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children has-child">
+                                <a href="#" class="menu-name" data-title="Product">Brand</a>
+                                <ul class="sub-menu">
+                                    @foreach (var bc in supplierList)
+                                    {
+                                        <li class="menu-item"><a href="@Url.Action("Index", "Brand", new { id = bc.SupplierID })">@bc.CompanyName</a></li>
+                                    }
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="~/Home/About">About</a></li>
+                            <li class="menu-item"><a href="~/Home/Contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
+                    <div class="logo-for-mobile hidden-lg hidden-md">
+                        <a href="~/home" class="biolife-logo"><img style="padding-left:20%" src="~/Content/clients/images/justbuy-logo/logo_justbuy_L.gif" alt="justbuy logo" width="150" height="80" /></a>
+                    </div>
+                    <div class="biolife-cart-info center-align-mobile">
+                        <div class="mobile-search">
+                            <a href="javascript:void(0)" class="open-searchbox"><i class="biolife-icon icon-search"></i></a>
+                            <div class="mobile-search-content">
+                                <form action="#" class="form-search" name="mobile-seacrh" method="get">
+                                    <a href="#" class="btn-close"><span class="biolife-icon icon-close-menu"></span></a>
+                                    <input type="text" name="s" class="input-text" value="" placeholder="Search here...">
+                                    <button type="submit" class="btn-submit">go</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="minicart-block layout-02">
+                            <div class="minicart-contain">
+                                <div class="icon-contain">
+                                    <div class="span-index">
+                                        <i class="icon-cart-mini biolife-icon"></i>
+                                        <span class="qty">@ViewBag.ItemQuantity</span>
+                                        <span class="sub-total">@ViewBag.Items items - $@ViewBag.Total</span>
+                                    </div>
+                                    <a href="~/Cart/Index" class="btn-to-cart">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-menu-toggle">
+                            <a class="btn-toggle" data-object="open-mobile-menu" href="javascript:void(0)">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

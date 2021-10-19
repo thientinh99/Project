@@ -1,0 +1,116 @@
+﻿@model TheNight_JustBuy.Models.Feedback
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Hero Section-->
+<div class="hero-section hero-background">
+    <h1 class="page-title">Organic Fruits</h1>
+</div>
+
+<!--Navigation section-->
+<div class="container">
+    <nav class="biolife-nav nav-86px">
+        <ul>
+            <li class="nav-item"><a href="index-2.html" class="permal-link">Home</a></li>
+            <li class="nav-item"><span class="current-page">Contact</span></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="page-contain contact-us">
+
+    <!-- Main content -->
+    <div id="main-content" class="main-content">
+        <div class="wrap-map biolife-wrap-map" id="map-block">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.789511472892!2d105.77749831474247!3d10.034220992827668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0881fa2f86433%3A0xee52427c850bbc0d!2zMSDEkC4gTMO9IFThu7EgVHLhu41uZywgVMOibiBBbiwgTmluaCBLaeG7gXUsIEPhuqduIFRoxqEsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1619547096294!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="contact-info-container sm-margin-top-27px xs-margin-bottom-60px xs-margin-top-60px">
+                        <h4 class="box-title">Our Contact</h4>
+                        <p class="frst-desc">On the way to build and develop, we always listen to everyone's comments and feedback, helping everyone to have a better career.</p>
+                        <ul class="addr-info">
+                            <li>
+                                <div class="if-item">
+                                    <b class="tie">Addess:</b>
+                                    <p class="dsc"> 01 Ly Tu Trong, Ninh Kieu District, City. Can Tho</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="if-item">
+                                    <b class="tie">Phone:</b>
+                                    <p class="dsc">(+0292) 0292 3731 072</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="if-item">
+                                    <b class="tie">Email:</b>
+                                    <p class="dsc">Justbuy@company.com</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="if-item">
+                                    <b class="tie">Store Open:</b>
+                                    <p class="dsc">07am - 05pm, Mon - Sat</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="biolife-social inline">
+                            <ul class="socials">
+                                <li><a href="#" title="twitter" class="socail-btn"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#" title="facebook" class="socail-btn"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#" title="pinterest" class="socail-btn"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                <li><a href="#" title="youtube" class="socail-btn"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="#" title="instagram" class="socail-btn"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="contact-form-container sm-margin-top-112px">
+                        <h4 style="color:blue">@ViewBag.Mess</h4>
+                        @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "comment-form", @id = "commentform", enctype = "multipart/form-data" }))
+                        {
+                            <p class="form-row">
+                                <input type="text" name="FullName" required value="" placeholder="Your Name" class="txt-input">
+
+                            </p>
+                            <b style="color:red"> @ViewBag.FullName</b>
+                            @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                            <p class="form-row">
+                                <input type="text" name="Subject" value="" required placeholder="Subject" class="txt-input">
+
+                            </p>
+                            <b style="color:red"> @ViewBag.Subject</b>
+                            @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                            <p class="form-row">
+                                <input type="email" name="Email" value="" required placeholder="Email" class="txt-input">
+
+                            </p>
+                            <b style="color:red"> @ViewBag.Email</b>
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                            <p class="form-row">
+                                <textarea name="Content" cols="30" rows="9" required  placeholder="Leave Message"></textarea>
+
+                            </p>
+                            <b style="color:red"> @ViewBag.Content</b>
+                            @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                            <p class="form-row">
+                                <button class="btn btn-submit" type="submit">send message</button>
+                            </p>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

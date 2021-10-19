@@ -1,0 +1,130 @@
+﻿@model IEnumerable<TheNight_JustBuy.Models.ProductComment>
+
+@{
+    ViewBag.Title = "Manage Product Comments";
+    ViewBag.Manage = "Manage Product Comments";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Data of Product Comments</h3>
+            </div>
+            <div class="card-body">
+                <table id="ProductCommentTable" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.User.Username)
+                            </th>
+                            <th>
+                                Full name
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Product.ProductName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Product.Thumbnail)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.CommentedDate)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.User.Username)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.User.FirstName) @Html.DisplayFor(modelItem => item.User.LastName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Product.ProductName)
+                            </td>
+                            <td>
+                                <img src="@Url.Content(item.Product.Thumbnail)"  width="150"/>
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CommentedDate)
+                            </td>
+
+                            <td class="project-actions text-right">
+                                <a class="btn btn-primary btn-sm" href="~/Admin/ProductComments/Details/@item.ProductCommentID">
+                                    <i class="fas fa-eye">
+                                    </i>
+                                    View
+                                </a><a class="btn btn-danger btn-sm" href="~/Admin/ProductComments/Delete/@item.ProductCommentID">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section ScriptConfig
+{
+    @Styles.Render("~/asset/css/datatable")
+    @Scripts.Render("~/asset/scripts/datatable")
+    <script src="~/Asset/ajaxChangeSatus/blogComment.js"></script>
+    <script>
+        $("#ProductCommentTable").DataTable({
+            "responsive": true,
+            "autoWidth": false,
+            "dom": '<"pull-left"B><"pull-right"f>rt<"row"<"col-sm-4"l><"col-sm-4"i><"col-sm-4"p>>',
+            "buttons": [
+                {
+                    extend: 'excel',
+                    text: '<i class="fas fa-file-excel"></i> Excel',
+                    exportOptions: {
+                        modifier: {
+                            page: 'current'
+                        }
+                    },
+                    className: 'btn btn-success btn-sm'
+                },
+                {
+                    extend: 'pdf',
+                    text: '<i class="fas fa-file-pdf"></i> PDF',
+                    exportOptions: {
+                        modifier: {
+                            page: 'current'
+                        }
+                    },
+                    className: 'btn btn-danger btn-sm'
+                },
+                {
+                    extend: 'print',
+                    text: '<i class="fas fa-print"></i> Print',
+                    exportOptions: {
+                        modifier: {
+                            page: 'current'
+                        }
+                    },
+                    className: 'btn btn-info btn-sm'
+                }
+            ],
+            "lengthMenu": [[5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"]],
+            "aoColumns": [
+                null,
+                null,
+                null,
+                null,
+                { "width": "15%", "targets": 0 }
+            ]
+        });
+    </script>
+}

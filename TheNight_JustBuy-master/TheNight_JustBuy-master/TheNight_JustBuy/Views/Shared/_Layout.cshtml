@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JustBuy - Home page</title>
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,600,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/clients/images/favicon.png" />
+    <link rel="stylesheet" href="~/Content/clients/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/clients/css/animate.min.css">
+    <link rel="stylesheet" href="~/Content/clients/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/clients/css/nice-select.css">
+    <link rel="stylesheet" href="~/Content/clients/css/slick.min.css">
+    <link rel="stylesheet" href="~/Content/clients/css/style.css">
+    <link rel="stylesheet" href="~/Content/clients/css/main-color01.css">
+    <link href="~/Asset/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css" rel="stylesheet" />
+    <link href="~/Asset/plugins/toastr/toastr.min.css" rel="stylesheet" />
+</head>
+<body class="biolife-body">
+
+    @{Html.RenderAction("HeaderClient", "Home");}
+
+    @RenderBody()
+
+    @{Html.RenderAction("FooterClient", "Home");}
+
+    <script src="~/Content/clients/js/jquery-3.4.1.min.js"></script>
+    <script src="~/Content/clients/js/bootstrap.min.js"></script>
+    <script src="~/Content/clients/js/jquery.countdown.min.js"></script>
+    <script src="~/Content/clients/js/jquery.nice-select.min.js"></script>
+    <script src="~/Content/clients/js/jquery.nicescroll.min.js"></script>
+    <script src="~/Content/clients/js/slick.min.js"></script>
+    <script src="~/Content/clients/js/biolife.framework.js"></script>
+    <script src="~/Content/clients/js/functions.js"></script>
+    <script src="~/Asset/plugins/sweetalert2/sweetalert2.min.js"></script>
+    <script src="~/Asset/plugins/toastr/toastr.min.js"></script>
+    @RenderSection("ClientScript", false)
+</body>
+
+</html>

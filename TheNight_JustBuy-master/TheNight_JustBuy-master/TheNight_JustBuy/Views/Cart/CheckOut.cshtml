@@ -1,0 +1,96 @@
+﻿@model List<TheNight_JustBuy.ViewModels.Cart>
+@{
+    ViewBag.Title = "CheckOut";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="hero-section hero-background">
+    <h1 class="page-title">JustBuy</h1>
+</div>
+
+<div class="container">
+    <nav class="biolife-nav">
+        <ul>
+            <li class="nav-item"><a href="@Url.Action("Index", "Home")" class="permal-link">Home</a></li>
+            <li class="nav-item"><a href="@Url.Action("Index", "Cart")" class="permal-link">ShoppingCart</a></li>
+            <li class="nav-item"><span class="current-page">Checkout</span></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="page-contain checkout">
+    <div id="main-content" class="main-content">
+        <div class="container sm-margin-top-37px">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                    <div class="checkout-progress-wrap">
+                        <ul class="steps">
+                            <li class="step 1st">
+                                <div class="checkout-act active">
+                                    <h3 class="title-box"><span class="number">*</span>Customer Information</h3>
+                                    <div class="box-content">
+                                        <div class="login-on-checkout">
+                                            @using (Html.BeginForm("CheckOut", "Cart", FormMethod.Post))
+                                            {
+                                                <p class="form-row">
+                                                    <label for="input_email">Note</label>
+                                                    <input type="email" name="Note" id="input_email" value="" placeholder="Your Note">
+                                                    <button type="submit" name="btn-sbmt" class="btn">Checkout</button>
+                                                </p>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 sm-padding-top-48px sm-margin-bottom-0 xs-margin-bottom-15px">
+                    <div class="order-summary sm-margin-bottom-80px">
+                        <div class="title-block">
+                            <h3 class="title">Order Summary</h3>
+                            <a href="@Url.Action("Index", "Cart")" class="link-forward">Edit cart</a>
+                        </div>
+                        <div class="cart-list-box short-type">
+                            <span class="number">2 items</span>
+                            <ul class="cart-list">
+                                @foreach (var item in Model)
+                                {
+                                    <li class="cart-elem">
+                                        <div class="cart-item">
+                                            <div class="product-thumb">
+                                                <a class="prd-thumb" href="#">
+                                                    <figure><img src="@Url.Content(item.Product.Thumbnail)" width="113" height="113" alt="shop-cart"></figure>
+                                                </a>
+                                            </div>
+                                            <div class="info">
+                                                <span class="txt-quantity">X @item.Quantity</span>
+                                                <a href="@Url.Action("Detail", "Items", new { id = item.Product.ProductID })" class="pr-name">@item.Product.ProductName</a>
+                                            </div>
+                                            <div class="price price-contain">
+                                                <ins><span class="price-amount"><span class="currencySymbol">$</span>@item.Product.UnitPrice</span></ins>
+                                                <del><span class="price-amount"><span class="currencySymbol">$</span>@item.Product.OldUnitPrice</span></del>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                            <ul class="subtotal"> 
+                                <li>
+                                    <div class="subtotal-line">
+                                        <b class="stt-name">total:</b>
+                                        <span class="stt-price">$ @ViewBag.TotalTogether</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
