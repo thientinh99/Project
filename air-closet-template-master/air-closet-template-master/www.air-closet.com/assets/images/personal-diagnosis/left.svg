@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none}.cls-1{stroke:#333;stroke-linecap:round;stroke-width:4px}
+        </style>
+    </defs>
+    <g id="グループ_802" data-name="グループ 802" transform="translate(-590 -1142)">
+        <g id="グループ_801" data-name="グループ 801" transform="translate(-.644 .809)">
+            <path id="パス_827" d="M0 0l23.215.453" class="cls-1" data-name="パス 827" transform="rotate(-60 1306.497 67.67)"/>
+            <path id="パス_833" d="M0 0h11.05" class="cls-1" data-name="パス 833" transform="rotate(-45 1710.198 -149.8)"/>
+        </g>
+        <path id="長方形_1182" d="M0 0h28v28H0z" class="cls-2" data-name="長方形 1182" transform="translate(590 1142)"/>
+    </g>
+</svg>

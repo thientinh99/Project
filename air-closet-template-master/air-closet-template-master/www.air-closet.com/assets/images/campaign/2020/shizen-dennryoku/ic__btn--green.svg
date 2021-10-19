@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.889" height="21.778" viewBox="0 0 27.889 21.778">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #7dbd5b;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #7dbd5b;
+      }
+    </style>
+  </defs>
+  <g id="グループ_1410" data-name="グループ 1410" transform="translate(0.5 0.5)">
+    <rect id="長方形_41" data-name="長方形 41" class="cls-1" width="23.222" height="17.111" rx="1" transform="translate(3.667 3.667)"/>
+    <rect id="長方形_40" data-name="長方形 40" class="cls-2" width="23.222" height="17.111" rx="2" transform="translate(1.833 1.833)"/>
+    <rect id="長方形_39" data-name="長方形 39" class="cls-1" width="23.222" height="17.111" rx="1"/>
+    <path id="長方形_42" data-name="長方形 42" class="cls-3" d="M2,0H21.222a2,2,0,0,1,2,2V4.278a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2A2,2,0,0,1,2,0Z"/>
+  </g>
+</svg>

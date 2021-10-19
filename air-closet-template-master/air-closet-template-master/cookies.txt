@@ -1,0 +1,21 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.docs.google.com	TRUE	/forms/d/e/1FAIpQLSdlE3QFcCSOsF2n4VyRwRvZ65gKldiYFZyasMtPUzf8mt6SiA	FALSE	1999999999	S	spreadsheet_forms=sgHVrrPu0rH_AtMCEhGnwD_OA41ZzwdJb1F_N7mP4R0
+.google.com	TRUE	/	FALSE	1999999999	NID	211=dyXXmu1XCL0gbslJL70YO9E6EMzRhCHf0SvOqufV5FT4hKVXB9ojCrPu7UikjCPzIaeUHd_lHgp68R1kU56v2IrW9dCU46FhrTsHPJ2n8zugIuncR0CSbQey-7Tq_TgbXOQ3XZppzlI8aboXu-LfRmU-1SjBaMKN8itlXkr-DNE
+.eposcard.co.jp	TRUE	/	FALSE	1999999999	ak_bmsc	5C231684D41E736495E62D7F6DE5F6E5172B30C7FB7B0000274F516056B78551~plL6XH4Fcl31yq4P0sWNv+jpEJ+ivGzWfrUseuVnsFnl6kvQg2CXxBwUzudRvYlwT2RU4bW8x1ARzxRe6OAqe9ciNtTe1fST+wpdD5T1Pkt/YJNGo0ruLr0wT1pIAJRLVpMxz1R74mlVjo79qWwqpW4iZufEwNGlnCtEOvc4ZrJr9iZjaaIW93zH49F6cmhVPj1zT/4zSag+ZftsKervCZjGkNKOWyyOMcCRds9aV0hGw=
+.eposcard.co.jp	TRUE	/	FALSE	1999999999	bm_sz	F9BD5DE43C523AA5CF20687D4CC39882~YAAQxzArF7u9FRt4AQAAEjGdPQsWofBve4KsgMVF9akwzleJxXDsG0xbW0ESLrwc/xLAdpjAqt2yrKNhFaLtZce5b9ypkOXe7aB6F6DrKKHd0yeIxPC0aVowen79/5gVKpin8dSni/w4B0exFLrPW10/53mz/HnKY/faXQkrI1C2J+uTCEdh5XrAB6boAPjNi8ZNKg==
+.eposcard.co.jp	TRUE	/	FALSE	1999999999	_abck	31FFD0CDC16D95FC744287493BD50EB2~-1~YAAQxzArF7y9FRt4AQAAEjGdPQWCya9s1iWOuWYBzxoFP+lV38I0oqUU9cfK+ORBQ56teEgMAhAo3E9Ur10q6o5J+WW4KAZxRU4ImbcsGykN53X2HnldkHYbAYijne6Omj/eeKA+FO/0N8A3m7yO31lzGq1wtaXAqyT6T0V95dNsxFDd9di1hD5iZYRO3Lxid5r5Ozff0a7ynYu1d64dXHgZffQUV07eYfdLW33u7EZCmgK33I5saVpoQHWg2DRho+0UT/VyzfrsT0uM3fbfAXaxj6tsqGvI4wF1/AYUDs4sXAxLkInipgMduwVRZt+O3RafID8tfBlQZBTqO31/FTXE8icQCMcC/cdWw/15WopdtLCGjsBR9VrGA6CZ~-1~-1~-1
+.faq.air-closet.com	TRUE	/	FALSE	1999999999	__cfruid	01ede7e1d4dbf6ba0f3bb63692768702bcfad129-1615941693
+docs.google.com	TRUE	/	FALSE	1999999999	SameSite	none
+.eposcard.co.jp	TRUE	/	FALSE	1999999999	bm_mi	37E548C677528C22BB01DF6A119A35D5~Ajfv6e7gWlCpsoA6bWDWFZmhzbM48/rjDLUnOxD9E2a27XpZruZxQhwfddKDwXyrrftfaBBTM3g5zMed1tMCbcGQHy8vsGcBS3pq6RKX55GrWmXi7xOF9idHR8mcWf0noY9fd+KIgN3wsl2XTY+OOQIjB1pNy2HIuovICHXYtIj4gO70Qm3fIaXX2l79piPBz24NYB+3VWsG4kilCJKxwaz5K1ekJmmFxF1eEvrTijJH/xwfJKYn33FQD6oZUwqKuX+3bOb70CFnRbaQJ/IFBQ==
+corp.air-closet.com	TRUE	/	FALSE	1999999999	mw-wp-form_session_mw-wp-form-15	0ccf8dc540d316ff1bf839e20df84a37e7e58e73
+corp.air-closet.com	TRUE	/	FALSE	1999999999	mw-wp-form_session_mw-wp-form-15-meta	594ff32e8da6b85872f4783b5a557ec9421e091e
+corp.air-closet.com	TRUE	/	FALSE	1999999999	mw-wp-form_session_mw-wp-form-15-validation-error	ab508af4278b5e7a30d0cfedfea8055267b50b52
+corp.air-closet.com	TRUE	/	FALSE	1999999999	mw-wp-form_session_mw-wp-form-16	4f7fba2d820a5d4f998648f398d7b9fbd19a1b82
+corp.air-closet.com	TRUE	/	FALSE	1999999999	mw-wp-form_session_mw-wp-form-16-meta	f0c033961527cdc6efe75b7b076ce243d3310bd9
+corp.air-closet.com	TRUE	/	FALSE	1999999999	mw-wp-form_session_mw-wp-form-16-validation-error	857e372000d0c0357be8a96fe9c0bc3ae17989af
+.faq.air-closet.com	TRUE	/	FALSE	1999999999	__cfduid	d9f81cff63d3b0a2dc123b84c15c062c61615942247
+faq.air-closet.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+www.air-closet.com	TRUE	/	FALSE	1999999999	_ac_before_path	%2Fstyle-book%2F%3Aid%2F
+www.air-closet.com	TRUE	/	FALSE	1999999999	connect.sid	s%3AycOJ_PutFJX07r6FLHMnXxW-tLjdUeM9.6XEOMQS569CYoHm8s7G7TKR%2Fz5a7zxy2hBuSMxGf3yM
+

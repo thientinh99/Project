@@ -1,0 +1,22 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * soleil:
+ *   - http://typekit.com/eulas/00000000000000003b9aef81
+ *
+ * © 2009-2021 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2020-09-03 06:38:19 UTC"}*/
+
+@import url("../p.typekit.net/p59eb.css?s=1&amp;k=kps6lxx&amp;ht=tk&amp;f=17006&amp;a=9164241&amp;app=typekit&amp;e=css");
+
+@font-face {
+font-family:"soleil";
+src:url("af/273d01/00000000000000003b9aef81/27/l5bba?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&amp;fvd=n6&amp;v=3") format("woff2"),url("af/273d01/00000000000000003b9aef81/27/d5bba?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&amp;fvd=n6&amp;v=3") format("woff"),url("af/273d01/00000000000000003b9aef81/27/a5bba?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&amp;fvd=n6&amp;v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:600;
+}
+
+.tk-soleil { font-family: "soleil",sans-serif; }
