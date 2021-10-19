@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+E:\2020\webtoeic\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1660125847.index
+4046968577.index
+3879384434.index
+3355874511.index
+2836924037.index
+1488474753.index
