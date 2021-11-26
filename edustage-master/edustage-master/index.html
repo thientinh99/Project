@@ -405,7 +405,7 @@
 
   <script>
 
-    $.getJSON('https://script.google.com/macros/s/AKfycbx8DKKwjbLqQRF0Zd6GRXSEJg8LYxuZgmFkQxnZ1E_PQ4-myjyDXKtFvOX8nxQYlnYgIQ/exec?action=getTeacher', function (data) {
+    $.getJSON('https://script.google.com/macros/s/AKfycbxFklBCiUu2Eo8kNNIJ0iM76lz_08CC-l9044RYHOG7BMaO0M6z4TQk9Lx5pOchs3Bc/exec?action=getTeacher', function (data) {
 
       // console.log(`json ${data}`);
       const html = data.map(gv => {
@@ -437,7 +437,7 @@
       console.log(html);
       document.querySelector("#gv").insertAdjacentHTML("afterbegin", html);
     });
-    $.getJSON('https://script.google.com/macros/s/AKfycbx8DKKwjbLqQRF0Zd6GRXSEJg8LYxuZgmFkQxnZ1E_PQ4-myjyDXKtFvOX8nxQYlnYgIQ/exec?action=getEvent', function (data) {
+    $.getJSON('https://script.google.com/macros/s/AKfycbxFklBCiUu2Eo8kNNIJ0iM76lz_08CC-l9044RYHOG7BMaO0M6z4TQk9Lx5pOchs3Bc/exec?action=getEvent', function (data) {
 
       // console.log(`json ${data}`);
       const html = data.map(ev => {
@@ -500,7 +500,7 @@
       }).join('');
       document.querySelector("#eventid").insertAdjacentHTML("afterbegin", html);
     });
-    $.getJSON('https://script.google.com/macros/s/AKfycbx8DKKwjbLqQRF0Zd6GRXSEJg8LYxuZgmFkQxnZ1E_PQ4-myjyDXKtFvOX8nxQYlnYgIQ/exec?action=getCarousel', function (data) {
+    $.getJSON('https://script.google.com/macros/s/AKfycbxFklBCiUu2Eo8kNNIJ0iM76lz_08CC-l9044RYHOG7BMaO0M6z4TQk9Lx5pOchs3Bc/exec?action=getCarousel', function (data) {
 
       // console.log(`json ${data}`);
       const html = data.map(ca => {
@@ -526,7 +526,7 @@
   </div>
   <div class="modal fade" id="ModalCourse${ca.Id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content" style="border: 7px solid #00BFFF	;">
+    <div class="modal-content" style="width:570px;border: 7px solid #00BFFF	;">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Khóa học: ${ca.Ten_khoa_hoc}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -582,7 +582,7 @@
         }
         $.ajax({
           type: 'GET',
-          url: 'https://script.google.com/macros/s/AKfycbw5574tHi3RL81jzOlKijfrpB-kWuoVIXx_-ayGHsY0jyhdowPkO-LgBkzGD7dgl4YpVg/exec',
+          url: 'https://script.google.com/macros/s/AKfycbyz041FydvU0JgphFw7D4_C3nVKBTPqTgUNqsT1dOx0_ZogHCi0wQZFUAil5wSHRujZ/exec',
           dataType: 'json',
           crossDomain: true,
           data: data,
